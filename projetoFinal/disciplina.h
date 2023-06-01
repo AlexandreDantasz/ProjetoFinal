@@ -1,6 +1,9 @@
 #ifndef DISCIPLINA_H
 #define DISCIPLINA_H
 #include <QString>
+#include <iostream>
+
+using namespace std;
 
 class disciplina {
 private:
