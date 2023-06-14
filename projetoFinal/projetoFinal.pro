@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -9,17 +9,29 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    aluno.cpp \
+    alunodao.cpp \
+    dao.cpp \
     disciplina.cpp \
+    disciplinadao.cpp \
     main.cpp \
     mainwindow.cpp \
     matricula.cpp \
-    turma.cpp
+    matriculadao.cpp \
+    turma.cpp \
+    turmadao.cpp
 
 HEADERS += \
+    aluno.h \
+    alunodao.h \
+    dao.h \
     disciplina.h \
+    disciplinadao.h \
     mainwindow.h \
     matricula.h \
-    turma.h
+    matriculadao.h \
+    turma.h \
+    turmadao.h
 
 FORMS += \
     mainwindow.ui

@@ -3,7 +3,7 @@
 #include "disciplina.h"
 #include <iostream>
 
-class turma:public disciplina
+class Turma: public Disciplina
 {
     private:
        std::string cod_turma;
@@ -11,8 +11,9 @@ class turma:public disciplina
        int maxAlunos;
        int numAlunos;
     public:
-       turma();
-       const std::string &getCod_turma() const;
+       Turma();
+       QString toQString();
+       const std::string getCod_turma() const;
        void setCod_turma(const std::string &newCod_turma);
 
        int getSub_turma() const;
