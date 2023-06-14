@@ -2,18 +2,23 @@
 #define MATRICULADAO_H
 
 #include "dao.h"
-
-#include <QtSql>      //Lidar com
-#include <QSqlQuery>  //banco de dados
+#include "matricula.h"
+#include <QtSql>
+#include <QSqlDatabase>
+#include <QSqlQuery>
+#include <QVariant>
 
 class MatriculaDAO : public DAO<Matricula>  //Herda template da classe DAO
 {
 public:
     MatriculaDAO();
-    void incluir(Tipo*)=0;
+    void incluir(Matricula*mat)=0;
     Matricula* buscar(QString const &)=0;
-    void alterar(Tipo*)=0;
+    void alterar(Matricula*)=0;
     void deletar(QString const &)=0;
+private:
+    QString nomeBD;
+    QSqlDatabase db;
 };
 
 #endif // MATRICULADAO_H

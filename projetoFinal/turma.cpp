@@ -1,46 +1,58 @@
 #include "turma.h"
 
-const std::string &turma::getCod_turma() const
+
+//const std::string &getCod_turma() const;
+const std::string Turma::getCod_turma() const
 {
+    //A culpa é do bolsonaro
     return cod_turma;
 }
 
-void turma::setCod_turma(const std::string &newCod_turma)
+void Turma::setCod_turma(const std::string &newCod_turma)
 {
     cod_turma = newCod_turma;
 }
 
-int turma::getSub_turma() const
+int Turma::getSub_turma() const
 {
     return sub_turma;
 }
 
-void turma::setSub_turma(int newSub_turma)
+void Turma::setSub_turma(int newSub_turma)
 {
     sub_turma = newSub_turma;
 }
 
-int turma::getMaxAlunos() const
+int Turma::getMaxAlunos() const
 {
     return maxAlunos;
 }
 
-void turma::setMaxAlunos(int newMaxAlunos)
+void Turma::setMaxAlunos(int newMaxAlunos)
 {
     maxAlunos = newMaxAlunos;
 }
 
-int turma::getNumAlunos() const
+int Turma::getNumAlunos() const
 {
     return numAlunos;
 }
 
-void turma::setNumAlunos(int newNumAlunos)
+void Turma::setNumAlunos(int newNumAlunos)
 {
     numAlunos = newNumAlunos;
 }
 
-turma::turma()
+Turma::Turma()
 {
 
+}
+QString Turma::toQString()
+{
+    QString saida="";
+    saida+= QString::fromStdString(cod_turma);
+    saida+=";" + QString::number(sub_turma);
+    saida+=";" + QString::number(maxAlunos);
+    saida+=";" + QString::number(numAlunos);
+    return saida;
 }

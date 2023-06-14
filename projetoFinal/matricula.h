@@ -10,19 +10,20 @@ class Matricula
 {
 private:
     Aluno aluno;    //Ponteiro para aluno
-    Turma turma;    //Ponteiro para turma, um aluno possui uma matricula para cada turma
+    /*turma Turma;*/    //Ponteiro para turma, um aluno possui uma matricula para cada turma
     int ano;
     int semestre;
     float nota1;
     float nota2;
     float notaF;
 public:
+    Turma pTurma;
     Matricula();
     Matricula(const Aluno &newAluno, const Turma &newTurma,
               int ano, int semestre);   //Atribuições são feitas no construtor
 
-    void getAno() const;    //Função padrão
-    int setAno(int newAno);
+    int getAno() const;    //Função padrão
+    void setAno(int newAno);
 
     int getSemestre() const;    //Função padrão
     void setSemestre(int newSemestre);

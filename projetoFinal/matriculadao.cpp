@@ -17,8 +17,9 @@ void MatriculaDAO::incluir(Matricula *mat){
     //e "sub_matricula", os valores "tur" e "sub".
     query.prepare("INSERT INTO matricula (tur_matricula, sub_matricula) VALUES (:tur, :sub);");
     //Codigo e SubTurma são atributos da classe "Turma", que é um atributo da classe "Matricula"?
-    query.bindValue(":mat", mat->getCodigo());
-    query.bindValue(":nom", mat->getSubTurma());
+    query.bindValue(":tur", QString::fromStdString(mat->pTurma.getCod_turma()));
+    query.bindValue(":sub", QString::number(mat->pTurma.getSub_turma()));
+    query.exec();
     if(!query.exec())
     {
         db.close();
