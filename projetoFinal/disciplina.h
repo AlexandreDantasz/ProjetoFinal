@@ -5,12 +5,12 @@
 
 using namespace std;
 
-class disciplina {
+class Disciplina {
 private:
     string cod_disciplina;
     string nome_disciplina;
 public:
-    disciplina();
+    Disciplina();
     QString toQString();
     string getCod_disciplina() const;
     void setCod_disciplina(const string &newCod_disciplina);
