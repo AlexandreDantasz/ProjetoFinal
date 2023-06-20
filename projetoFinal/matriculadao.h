@@ -14,7 +14,7 @@ public:
     MatriculaDAO();
     void incluir(Matricula*mat)=0;
     Matricula* buscar(QString const &)=0;
-    void alterar(Matricula*)=0;
+    void  alterar(Matricula*, Matricula *)=0;
     void deletar(QString const &)=0;
 private:
     QString nomeBD;

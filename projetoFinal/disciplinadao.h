@@ -10,7 +10,7 @@ public:
     DisciplinaDAO();
     void incluir(Disciplina * obj);
 //    Disciplina * buscar(Disciplina * obj);
-//    void alterar(Disciplina * obj);
+    void alterar(Disciplina * obj, Disciplina * alt);
 //    void deletar(Disciplina * obj); // alteramos para a função não retornar nada
     bool analisarDisciplina(Disciplina *obj);
 private:

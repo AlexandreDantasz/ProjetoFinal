@@ -14,7 +14,7 @@ public:
     DAO(){}
     virtual void incluir(Tipo* obj)=0;//Create
     virtual Tipo* buscar(QString const &id)=0;//Read
-    virtual void alterar(Tipo* obj)=0;//Update
+    virtual void alterar(Tipo* obj, Tipo* alt)=0;//Update
     virtual void deletar(QString const &id)=0;//Delete
 
 };

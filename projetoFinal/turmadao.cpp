@@ -55,13 +55,13 @@ bool TurmaDAO::analisarTurma(Turma *obj) {
     query.bindValue(":numABanco", numA);
     query.exec();
 
-    bool disciplinaExiste = false;
+    bool turmaExiste = false;
     if (query.next()) {
         int count = query.value(0).toInt();
-        disciplinaExiste = (count > 0);
+        turmaExiste = (count > 0);
     }
 
     db.close();
 
-    return disciplinaExiste;
+    return turmaExiste;
 }

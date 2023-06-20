@@ -55,3 +55,35 @@ bool DisciplinaDAO::analisarDisciplina(Disciplina *obj) {
 
     return disciplinaExiste;
 }
+
+void DisciplinaDAO::alterar(Disciplina * obj, Disciplina * alt) {
+    if (!db.open()) {
+        throw QString("Erro ao acessar o banco de dados.");
+    }
+    //const std::string& codDisciplina, const std::string& nomeDisciplina
+    std::string codDisciplina = obj->getCod_disciplina();
+    std::string nomeDisciplina = obj->getNome_disciplina();
+
+    QSqlQuery query;
+    // Consulta para verificar se a disciplina já existe
+    query.prepare("SELECT COUNT(*) FROM disciplina WHERE cod_disciplina = :cod OR nome_disciplina = :nome;");
+    query.bindValue(":cod", QString::fromStdString(codDisciplina));
+    query.bindValue(":nome", QString::fromStdString(nomeDisciplina));
+    query.exec();
+
+    bool disciplinaExiste = false;
+    if (query.next()) {
+        int count = query.value(0).toInt();
+        disciplinaExiste = (count > 0);
+    }
+    if (disciplinaExiste) {
+        query.prepare("UPDATE disciplina SET cod_disciplina = :cod, nome_disciplina = :nome WHERE cod_disciplina = :codK, nome_disciplina = :nomeK;");
+        query.bindValue(":cod", QString::fromStdString(alt->getCod_disciplina()));
+        query.bindValue(":nome", QString::fromStdString(alt->getNome_disciplina()));
+        query.bindValue(":codK", QString::fromStdString(codDisciplina));
+        query.bindValue(":nomeK", QString::fromStdString(nomeDisciplina));
+    }
+    db.close();
+}
+
+

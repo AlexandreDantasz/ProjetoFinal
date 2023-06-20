@@ -13,12 +13,14 @@ SOURCES += \
     alunodao.cpp \
     dao.cpp \
     disciplina.cpp \
+    disciplinacontroller.cpp \
     disciplinadao.cpp \
     main.cpp \
     mainwindow.cpp \
     matricula.cpp \
     matriculadao.cpp \
     turma.cpp \
+    turmacontroller.cpp \
     turmadao.cpp
 
 HEADERS += \
@@ -26,11 +28,13 @@ HEADERS += \
     alunodao.h \
     dao.h \
     disciplina.h \
+    disciplinacontroller.h \
     disciplinadao.h \
     mainwindow.h \
     matricula.h \
     matriculadao.h \
     turma.h \
+    turmacontroller.h \
     turmadao.h
 
 FORMS += \
