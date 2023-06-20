@@ -10,7 +10,7 @@ public:
     TurmaDAO();
     void incluir(Turma * obj);
 //    Turma * buscar(Turma * obj);
-//    void alterar(Turma * obj);
+    void alterar(Turma * obj, Turma * alt);
 //    void deletar(Turma * obj); // alteramos para a função não retornar nada
     bool analisarTurma(Turma *obj);
 private:
