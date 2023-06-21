@@ -77,7 +77,7 @@ void DisciplinaDAO::alterar(Disciplina * obj, Disciplina * alt) {
         disciplinaExiste = (count > 0);
     }
     if (disciplinaExiste) {
-        query.prepare("UPDATE disciplina SET cod_disciplina = :cod, nome_disciplina = :nome WHERE cod_disciplina = :codK, nome_disciplina = :nomeK;");
+        query.prepare("UPDATE disciplina SET cod_disciplina = :cod, nome_disciplina = :nome WHERE cod_disciplina = :codK AND nome_disciplina = :nomeK;");
         query.bindValue(":cod", QString::fromStdString(alt->getCod_disciplina()));
         query.bindValue(":nome", QString::fromStdString(alt->getNome_disciplina()));
         query.bindValue(":codK", QString::fromStdString(codDisciplina));
