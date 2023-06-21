@@ -93,7 +93,7 @@ void TurmaDAO::alterar(Turma * obj, Turma * alt)
             turmaExiste = (count > 0);
         }
         if (turmaExiste) {
-            query.prepare("UPDATE disciplina SET cod_Turma = :cod OR cod_subTurma = :codSub; OR maxAlunos =  :maxAl OR numAlunos = :numAl WHERE cod_Turma = :codT, cod_subTurma = :codSubT, maxAlunos = :maxAlT, numAlunos = :numAlt;");
+            query.prepare("UPDATE disciplina SET cod_Turma = :cod , cod_subTurma = :codSub , maxAlunos =  :maxAl , numAlunos = :numAl WHERE cod_Turma = :codT AND cod_subTurma = :codSubT AND maxAlunos = :maxAlT AND numAlunos = :numAlt;");
             //query.bindValue(":cod", QString::fromStdString(alt->getCod_disciplina()));
             //query.bindValue(":nome", QString::fromStdString(alt->getNome_disciplina()));
             //query.bindValue(":codK", QString::fromStdString(codDisciplina));
