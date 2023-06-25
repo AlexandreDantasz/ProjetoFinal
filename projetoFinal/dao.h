@@ -13,9 +13,9 @@ class DAO //CRUD
 public:
     DAO(){}
     virtual void incluir(Tipo* obj)=0;//Create
-    virtual Tipo* buscar(QString const &id)=0;//Read
+    virtual bool buscar(Tipo * obj)=0;//Read
     virtual void alterar(Tipo* obj, Tipo* alt)=0;//Update
-    virtual void deletar(QString const &id)=0;//Delete
+    virtual void deletar(Tipo * obj)=0;//Delete
 
 };
 

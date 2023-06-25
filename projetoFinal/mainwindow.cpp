@@ -13,3 +13,9 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::on_pushButtonCriar_Disciplina_Disciplina_clicked()
+{
+    QString cod = ui->lineEditCodigo_Disciplina_Disciplina->text();
+}
+

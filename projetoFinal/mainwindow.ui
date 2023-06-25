@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tabAluno">
      <attribute name="title">
@@ -43,7 +43,7 @@
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700; font-style:italic;&quot;&gt;Nome:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit">
+     <widget class="QLineEdit" name="lineEditNomeAluno">
       <property name="geometry">
        <rect>
         <x>120</x>
@@ -66,7 +66,7 @@
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700; font-style:italic;&quot;&gt;Matrícula:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_2">
+     <widget class="QLineEdit" name="lineEditMatriculaAluno">
       <property name="geometry">
        <rect>
         <x>160</x>
@@ -76,7 +76,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="pushButtonCadastrarAluno">
       <property name="geometry">
        <rect>
         <x>100</x>
@@ -89,7 +89,7 @@
        <string>Cadastrar</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="pushButtonConsultarAluno">
       <property name="geometry">
        <rect>
         <x>260</x>
@@ -102,7 +102,7 @@
        <string>Consultar</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="pushButtonAtualizarAluno">
       <property name="geometry">
        <rect>
         <x>440</x>
@@ -115,7 +115,7 @@
        <string>Atualizar</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="pushButtonRemoverAluno">
       <property name="geometry">
        <rect>
         <x>610</x>
@@ -128,7 +128,7 @@
        <string>Remover</string>
       </property>
      </widget>
-     <widget class="QTextEdit" name="textEdit">
+     <widget class="QTextEdit" name="textEditResultadoAluno">
       <property name="geometry">
        <rect>
         <x>60</x>
@@ -168,7 +168,7 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700; font-style:italic;&quot;&gt;Matrícula:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_8">
+      <widget class="QLineEdit" name="lineEditMatricula_Aluno_Matricula">
        <property name="geometry">
         <rect>
          <x>150</x>
@@ -191,7 +191,7 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700; font-style:italic;&quot;&gt;Nome:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_14">
+      <widget class="QLineEdit" name="lineEditNome_Aluno_Matricula">
        <property name="geometry">
         <rect>
          <x>130</x>
@@ -227,7 +227,7 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:700; font-style:italic;&quot;&gt;Código:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_11">
+      <widget class="QLineEdit" name="lineEditCodigo_Disciplina_Matricula">
        <property name="geometry">
         <rect>
          <x>110</x>
@@ -250,7 +250,7 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:700; font-style:italic;&quot;&gt;Nome:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_12">
+      <widget class="QLineEdit" name="lineEditMatricula_Nome_Disciplina_Matricula">
        <property name="geometry">
         <rect>
          <x>100</x>
@@ -273,7 +273,7 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:700; font-style:italic;&quot;&gt;Turma/Subturma:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_13">
+      <widget class="QLineEdit" name="lineEditTurma_Disciplina_Matricula">
        <property name="geometry">
         <rect>
          <x>210</x>
@@ -284,7 +284,7 @@
        </property>
       </widget>
      </widget>
-     <widget class="QPushButton" name="pushButton_13">
+     <widget class="QPushButton" name="pushButtonMatricular">
       <property name="geometry">
        <rect>
         <x>310</x>
@@ -297,7 +297,7 @@
        <string>Matricular</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_14">
+     <widget class="QPushButton" name="pushButtonBuscarMatricula">
       <property name="geometry">
        <rect>
         <x>390</x>
@@ -310,7 +310,7 @@
        <string>Buscar</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_15">
+     <widget class="QPushButton" name="pushButtonAtualizarMatricula">
       <property name="geometry">
        <rect>
         <x>470</x>
@@ -323,7 +323,7 @@
        <string>Atualizar</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_16">
+     <widget class="QPushButton" name="pushButtonRemoverMatricula">
       <property name="geometry">
        <rect>
         <x>550</x>
@@ -361,7 +361,7 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700; font-style:italic;&quot;&gt;Turma/Subturma:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_15">
+      <widget class="QLineEdit" name="lineEditTurma_Matricula_Matricula">
        <property name="geometry">
         <rect>
          <x>150</x>
@@ -402,7 +402,7 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:700; font-style:italic;&quot;&gt;Código:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_3">
+      <widget class="QLineEdit" name="lineEditCodigo_Disciplina_Disciplina">
        <property name="geometry">
         <rect>
          <x>110</x>
@@ -425,7 +425,7 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:700; font-style:italic;&quot;&gt;Nome:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_4">
+      <widget class="QLineEdit" name="lineEditNome_Disciplina_Disciplina">
        <property name="geometry">
         <rect>
          <x>100</x>
@@ -435,7 +435,7 @@
         </rect>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_5">
+      <widget class="QPushButton" name="pushButtonCriar_Disciplina_Disciplina">
        <property name="geometry">
         <rect>
          <x>30</x>
@@ -448,7 +448,7 @@
         <string>Criar</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_6">
+      <widget class="QPushButton" name="pushButtonBuscar_Disciplina_Disciplina">
        <property name="geometry">
         <rect>
          <x>130</x>
@@ -461,7 +461,7 @@
         <string>Buscar</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_7">
+      <widget class="QPushButton" name="pushButtonAtualizar_Disciplina_Disciplina">
        <property name="geometry">
         <rect>
          <x>230</x>
@@ -474,7 +474,7 @@
         <string>Atualizar</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_8">
+      <widget class="QPushButton" name="pushButtonRemover_Disciplina_Disciplina">
        <property name="geometry">
         <rect>
          <x>330</x>
@@ -487,7 +487,7 @@
         <string>Remover</string>
        </property>
       </widget>
-      <widget class="QTextEdit" name="textEdit_2">
+      <widget class="QTextEdit" name="textEditResultado_Disciplina_Disciplina">
        <property name="geometry">
         <rect>
          <x>430</x>
@@ -523,7 +523,7 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:700; font-style:italic;&quot;&gt;Código:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_5">
+      <widget class="QLineEdit" name="lineEditCodigo_Turma_Disciplina">
        <property name="geometry">
         <rect>
          <x>110</x>
@@ -546,7 +546,7 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:700; font-style:italic;&quot;&gt;Subturma:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_6">
+      <widget class="QLineEdit" name="lineEditSubTurma_Turma_Disciplina">
        <property name="geometry">
         <rect>
          <x>150</x>
@@ -556,7 +556,7 @@
         </rect>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_9">
+      <widget class="QPushButton" name="pushButtonCriar_Turma_Disciplina">
        <property name="geometry">
         <rect>
          <x>30</x>
@@ -569,7 +569,7 @@
         <string>Criar</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_10">
+      <widget class="QPushButton" name="pushButtonBuscar_Turma_Disciplina">
        <property name="geometry">
         <rect>
          <x>130</x>
@@ -582,7 +582,7 @@
         <string>Buscar</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_11">
+      <widget class="QPushButton" name="pushButtonAtualizar_Turma_Disciplina">
        <property name="geometry">
         <rect>
          <x>230</x>
@@ -595,7 +595,7 @@
         <string>Atualizar</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_12">
+      <widget class="QPushButton" name="pushButtonRemover_Turma_Disciplina">
        <property name="geometry">
         <rect>
          <x>330</x>
@@ -608,7 +608,7 @@
         <string>Remover</string>
        </property>
       </widget>
-      <widget class="QTextEdit" name="textEdit_3">
+      <widget class="QTextEdit" name="textEditResultado_Turma_Disciplina">
        <property name="geometry">
         <rect>
          <x>430</x>

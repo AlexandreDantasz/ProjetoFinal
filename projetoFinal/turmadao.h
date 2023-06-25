@@ -9,10 +9,9 @@ class TurmaDAO : public DAO <Turma>
 public:
     TurmaDAO();
     void incluir(Turma * obj);
-//    Turma * buscar(Turma * obj);
+    bool buscar(Turma * obj);
     void alterar(Turma * obj, Turma * alt);
-//    void deletar(Turma * obj); // alteramos para a função não retornar nada
-    bool analisarTurma(Turma *obj);
+    void deletar(Turma * obj); // alteramos para a função não retornar nada
 private:
     QString nomeBD;
     QSqlDatabase db;

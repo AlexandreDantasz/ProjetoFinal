@@ -30,7 +30,7 @@ void DisciplinaDAO::incluir(Disciplina *obj){
     }
 }
 
-bool DisciplinaDAO::analisarDisciplina(Disciplina *obj) {
+bool DisciplinaDAO::buscar(Disciplina *obj) {
     if (!db.open()) {
         throw QString("Erro ao acessar o banco de dados.");
     }
@@ -77,7 +77,7 @@ void DisciplinaDAO::alterar(Disciplina * obj, Disciplina * alt) {
         disciplinaExiste = (count > 0);
     }
     if (disciplinaExiste) {
-        query.prepare("UPDATE disciplina SET cod_disciplina = :cod, nome_disciplina = :nome WHERE cod_disciplina = :codK AND nome_disciplina = :nomeK;");
+        query.prepare("UPDATE disciplina SET cod_disciplina = :cod, nome_disciplina = :nome WHERE cod_disciplina = :codK, nome_disciplina = :nomeK;");
         query.bindValue(":cod", QString::fromStdString(alt->getCod_disciplina()));
         query.bindValue(":nome", QString::fromStdString(alt->getNome_disciplina()));
         query.bindValue(":codK", QString::fromStdString(codDisciplina));
@@ -86,4 +86,27 @@ void DisciplinaDAO::alterar(Disciplina * obj, Disciplina * alt) {
     db.close();
 }
 
+void DisciplinaDAO::deletar(Disciplina * obj){
+    Disciplina * disciplina = new Disciplina();
+    disciplina->setCod_disciplina(obj->getCod_disciplina());
+    disciplina->setNome_disciplina(obj->getNome_disciplina());
+    if (this->buscar(disciplina)==0){
+        throw QString("Disciplina não encontrada!");
+    }
+    else{
+        if (!db.open()){
+            throw QString("Erro ao abrir o banco de dados");
+        }
+        QSqlQuery query;
+        query.prepare("DELETE FROM disciplina WHERE cod_disciplina = :cod AND nome_disciplina = :nome ;");
+        query.bindValue(":cod", QString::fromStdString(obj->getCod_disciplina()));
+        query.bindValue(":nome", QString::fromStdString(obj->getNome_disciplina()));
+        if (!query.exec()){
+            db.close();
+            throw QString("Erro ao executar a delete");
+        }
+        db.close();
+        delete obj;
+    }
+}
 

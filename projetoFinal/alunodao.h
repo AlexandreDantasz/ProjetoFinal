@@ -11,7 +11,7 @@ class AlunoDAO : public DAO<Aluno>
 public:
     AlunoDAO();
     void incluir(Aluno* obj);
-    Aluno* buscar(Aluno* obj);
+    bool buscar(Aluno* obj);
     void alterar(Aluno* obj);
     void remover(Aluno* obj); // estava retornando um ponteiro para Aluno mas mudamos
 private:

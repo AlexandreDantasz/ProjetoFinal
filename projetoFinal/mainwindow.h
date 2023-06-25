@@ -15,6 +15,10 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+
+    void on_pushButtonCriar_Disciplina_Disciplina_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
