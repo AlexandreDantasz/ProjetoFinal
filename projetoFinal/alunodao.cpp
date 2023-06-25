@@ -22,7 +22,7 @@ void AlunoDAO::incluir(Aluno* obj){
     db.close();
 }
 
-Aluno* AlunoDAO::buscar(Aluno* obj){
+bool AlunoDAO::buscar(Aluno* obj){
     if (!db.open()){
         throw QString("Erro ao abrir o banco de dados");
     }
@@ -44,17 +44,17 @@ Aluno* AlunoDAO::buscar(Aluno* obj){
         db.close();
     }
     if (obj->getMatricula()!="")
-        return obj;
+        return true;
     else{
         delete obj;
-        return nullptr;
+        return false;
     }
 }
 
 void AlunoDAO::alterar(Aluno* obj){
     Aluno* aluno = new Aluno();
     aluno->setMatricula(obj->getMatricula());
-    if (this->buscar(aluno)==nullptr){
+    if (this->buscar(aluno)==0){
         throw QString("Aluno não encontrado!");
     }
     else{
@@ -77,7 +77,7 @@ void AlunoDAO::alterar(Aluno* obj){
 void AlunoDAO::remover(Aluno* obj){
     Aluno* aluno = new Aluno();
     aluno->setMatricula(obj->getMatricula());
-    if (this->buscar(aluno)==nullptr){
+    if (this->buscar(aluno)==0){
         throw QString("Aluno não encontrado!");
     }
     else{

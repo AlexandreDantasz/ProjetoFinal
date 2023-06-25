@@ -2,18 +2,18 @@
 #define DISCIPLINACONTROLLER_H
 
 #include "disciplina.h"
-
+#include "disciplinadao.h"
 class DisciplinaController
 {
 public:
     DisciplinaController();
     void incluir(QString codDisciplina, QString nomeDisciplina);
-    //    Disciplina * buscar(Disciplina * obj);
-    //    void alterar(Disciplina * obj);
-    //    void deletar(Disciplina * obj); // alteramos para a função não retornar nada
-    bool analisarDisciplina(QString codDisciplina, QString nomeDisciplina);
+    bool buscar(QString codDisciplina, QString nomeDisciplina);
+    void alterar(QString codDisciplina, QString nomeDisciplina);
+    void deletar(QString codDisciplina, QString nomeDisciplina); // alteramos para a função não retornar nada
 private:
-    Disciplina objDis;
+    Disciplina * objDis, *objAlt;
+    DisciplinaDAO trem;
 };
 
 #endif // DISCIPLINACONTROLLER_H
